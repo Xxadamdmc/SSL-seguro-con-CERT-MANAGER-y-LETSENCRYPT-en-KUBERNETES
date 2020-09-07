@@ -4,14 +4,8 @@ metadata:
   name: nginx-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/issuer: "letsencrypt-prod" # referencia a nuestro issuer (emisor) que pedirá los certificados a letsencript
-spec:
-  tls:
-  - hosts:
-    - app-emulator.aelainnova.com # hotname configurado en nuestro DNS apuntando al loadbalancer de nuestro nginx controller
-    secretName: customsecretname # (lower case) este nombre lo tomara automáticamente nuestro Issuer (Emisor) para generar el SECRET, asi que nuestro secret se llamara customSecretName
   rules:
-  - host: app-emulator.aelainnova.com # hotname configurado en nuestro DNS apuntando al loadbalancer de nuestro nginx controller
+  - host: hostnameExample.com # hotname configurado en nuestro DNS apuntando al loadbalancer de nuestro nginx controller
     http: &http_rules
       paths:
       - path: /

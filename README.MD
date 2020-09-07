@@ -77,6 +77,12 @@ Apuntar el nombre de dominio a la ip del loadBalancer/nodePort, asi cada vez que
 # STEP 3 APP DEMO
  Desplegaremos una app DEMO en nuestro cluster de kubernetes.
 
+ Clonar Demo-nginx
+
+ > **CMD**: git clone https://github.com/Xxadamdmc/SSL-seguro-con-CERT-MANAGER-y-LETSENCRYPT-en-KUBERNETES.git
+ 
+ > **CMD**: cd SSL-seguro-con-CERT-MANAGER-y-LETSENCRYPT-en-KUBERNETES
+ 
  Deployment:
 ---
         apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
