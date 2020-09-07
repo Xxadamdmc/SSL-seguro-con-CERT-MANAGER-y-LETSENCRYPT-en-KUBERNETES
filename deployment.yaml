@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-demo
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx-demo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-demo
+    spec:
+      containers:
+        - image: nginx:1.14.2
+          name: nginx-demo
+          ports:
+            - containerPort: 80
+          resources: {}
+      restartPolicy: Always
+status: {}
